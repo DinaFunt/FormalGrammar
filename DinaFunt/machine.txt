@@ -1,0 +1,41 @@
+q1 q2 q3 q4 q5 q6 q7 q8 q777 q888
+1 
+2 ? # * B
+q1
+q888
+
+q1 1 -> q2 1 r
+
+q2 1 -> q3 ? l
+
+q3 # -> q3 # l
+q3 ? -> q3 ? l
+q3 1 -> q4 # r
+q3 B -> q5 B r
+q3 * -> q6 * r
+q3 2 -> q6 2 r
+
+q6 # -> q6 1 r
+q6 ? -> q6 * r
+q6 1 -> q7 ? r
+q6 B -> q8 B l
+
+q4 # -> q4 # r
+q4 ? -> q4 ? r
+q4 1 -> q3 # l
+q4 B -> q8 B l
+
+q5 # -> q5 1 r
+q5 ? -> q5 2 r
+q5 1 -> q7 ? r
+q5 B -> q8 B l
+
+q7 B -> q777 B l
+q7 1 -> q3 1 l
+
+q8 # -> q8 1 l
+q8 ? -> q8 1 l
+q8 * -> q8 1 l
+q8 1 -> q8 1 l
+q8 2 -> q2 1 r
+q8 B -> q888 B r
