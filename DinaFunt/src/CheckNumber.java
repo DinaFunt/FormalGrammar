@@ -21,19 +21,15 @@ public class CheckNumber {
 
         currentWord = currentWord.replace("e", "").replace(" ", "");
 //        System.out.println(currentWord);
-
-        if (currentWord.matches("1*")) {
-            try {
-                FileWriter fw = new FileWriter(derivation);
-                fw.write(sb.toString());
-                fw.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return true;
-        } else {
-            return false;
+        try {
+            FileWriter fw = new FileWriter(derivation);
+            fw.write(sb.toString());
+            fw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+        return currentWord.matches("1*");
     }
 
     private void constructNumber(int number) {
